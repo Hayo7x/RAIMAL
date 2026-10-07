@@ -1,0 +1,14 @@
+.venv/
+tmp/ui-wheels/
+web/node_modules/
+web/dist/
+web/.env.local
+web/.vercel/
+supabase/.temp/
+__pycache__/
+*.py[cod]
+.streamlit/secrets.toml
+data/*.db
+data/*.sqlite*
+artifacts/runs/*
+!artifacts/runs/.gitkeep

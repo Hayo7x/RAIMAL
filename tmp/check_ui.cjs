@@ -1,0 +1,21 @@
+const { chromium } = require('C:/Users/Hamza/node_modules/playwright');
+(async () => {
+  const browser = await chromium.launch({executablePath:'C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe',headless:true});
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  await page.goto('http://localhost:8501');
+  await page.getByRole('button', { name: 'Explore the inspection demo' }).waitFor();
+  await page.screenshot({ path: 'tmp/landing-desktop.png', fullPage: true });
+  await page.getByRole('button', { name: 'Explore the inspection demo' }).click();
+  await page.getByRole('heading', { name: 'Your field, in focus.' }).waitFor();
+  await page.locator('.js-plotly-plot').first().waitFor();
+  await page.screenshot({ path: 'tmp/desk-desktop.png', fullPage: true });
+  if(await page.locator('[data-testid="stException"]').count()) throw Error('Desk exception');
+  await page.getByText('Overview', { exact: true }).click();
+  await page.getByRole('button', { name: 'Explore the inspection demo' }).waitFor();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.screenshot({ path: 'tmp/landing-mobile.png', fullPage: true });
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
+  if(overflow) throw Error('Mobile page overflows');
+  console.log('Brave desktop and mobile checks passed');
+  await browser.close();
+})().catch(error => { console.error(error); process.exit(1); });
