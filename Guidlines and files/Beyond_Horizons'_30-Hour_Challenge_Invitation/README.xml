@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document source_markdown="README.md">
+  <section title="Beyond Horizons 30-Hour Challenge: source notes">
+    <paragraph>This folder contains structured Markdown transcriptions of the three supplied PDFs. The notes preserve the source wording and requirements while organizing them for reliable AI retrieval.</paragraph>
+    <section title="Documents">
+      <list type="unordered">
+        <item>Challenge overview and domain rules - challenge purpose, four domains, participation stages, prizes, judging criteria, and useful reading.</item>
+        <item>Judging rubric - all six weighted criteria, score descriptions, score caps, tie-breakers, and judge prompts.</item>
+        <item>Updated agenda - event schedule as shown in the agenda PDF.</item>
+      </list>
+    </section>
+    <section title="Source coverage">
+      <table>
+        <row>
+          <cell field="source_pdf">Beyond Horizons’ 30-Hour Challenge.pdf</cell>
+          <cell field="pages">4</cell>
+          <cell field="markdown">Beyond-Horizons-30-Hour-Challenge.md</cell>
+        </row>
+        <row>
+          <cell field="source_pdf">Rubric.pdf</cell>
+          <cell field="pages">1</cell>
+          <cell field="markdown">Rubric.md</cell>
+        </row>
+        <row>
+          <cell field="source_pdf">UpdatedAgenda.pdf</cell>
+          <cell field="pages">2</cell>
+          <cell field="markdown">Updated-Agenda.md</cell>
+        </row>
+      </table>
+    </section>
+    <section title="Extraction notes">
+      <list type="unordered">
+        <item>The agenda PDF does not state AM/PM, a calendar date, or a time zone. Times are reproduced as printed; do not infer these details.</item>
+        <item>The challenge invitation names three useful readings but supplies no URLs, publication dates, or full bibliographic details.</item>
+        <item>The rubric's table has merged/shared row cells. Its score-level meaning is represented in explicit criterion-by-criterion lists; the source's global score mapping and special caps are stated separately.</item>
+      </list>
+    </section>
+  </section>
+</document>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document source_markdown="Rubric.md">
+  <metadata>
+    <document>Judging Rubric</document>
+    <source_file>Rubric.pdf</source_file>
+    <source_pages>1</source_pages>
+    <document_type>evaluation_rubric</document_type>
+  </metadata>
+  <section title="Judging Rubric">
+    <section title="Criteria and weights">
+      <table>
+        <row>
+          <cell field="id">C1</cell>
+          <cell field="criterion">Problem definition and specificity</cell>
+          <cell field="weight">15%</cell>
+        </row>
+        <row>
+          <cell field="id">C2</cell>
+          <cell field="criterion">Originality and differentiation</cell>
+          <cell field="weight">15%</cell>
+        </row>
+        <row>
+          <cell field="id">C3</cell>
+          <cell field="criterion">Solution design and expected effectiveness</cell>
+          <cell field="weight">20%</cell>
+        </row>
+        <row>
+          <cell field="id">C4</cell>
+          <cell field="criterion">Technical and implementation feasibility</cell>
+          <cell field="weight">15%</cell>
+        </row>
+        <row>
+          <cell field="id">C5</cell>
+          <cell field="criterion">Demonstrated development and validation</cell>
+          <cell field="weight">10%</cell>
+        </row>
+        <row>
+          <cell field="id">C6</cell>
+          <cell field="criterion">Saudi-market relevance and potential impact</cell>
+          <cell field="weight">15%</cell>
+        </row>
+        <row>
+          <cell field="id">C7</cell>
+          <cell field="criterion">Presentation and responses to questions</cell>
+          <cell field="weight">10%</cell>
+        </row>
+      </table>
+      <paragraph>Total: 100%.</paragraph>
+    </section>
+    <section title="Score-level descriptors by criterion">
+      <paragraph>The rubric table explicitly describes levels 0, 1, 3, and 5. The source's general scoring rule defines levels 2 and 4 between those anchors (see scoring rules).</paragraph>
+      <section title="C1. Problem definition and specificity (15%)">
+        <list type="unordered">
+          <item>5: (a) Supports the problem's existence with relevant evidence, such as published data, documented observations, or stakeholder input; (b) explains how the problem is currently handled and the specific shortcoming of that approach; (c) characterizes severity or frequency using a relevant measure, stating the source or assumptions.</item>
+          <item>3: (a) Identifies a specific user or stakeholder; (b) describes the situation where the problem occurs and its consequence; (c) defines the scope clearly enough to distinguish what the project addresses from what it does not.</item>
+          <item>1: Identifies a general problem and a broad group affected by it.</item>
+          <item>0: No identifiable problem is presented, or the submission describes a technology without explaining the problem it addresses.</item>
+        </list>
+      </section>
+      <section title="C2. Originality and differentiation (15%)">
+        <list type="unordered">
+          <item>5: (a) Compares at least two relevant alternatives, including the closest available approach; (b) explains why the contribution changes functionality, performance, or use in a meaningful way; (c) supports the claimed advantage through reasoned technical comparison, calculation, relevant evidence, or test, while identifying a trade-off or limitation.</item>
+          <item>3: (a) Identifies at least one relevant existing alternative; (b) specifically explains how the proposed solution differs; (c) explains how the difference could improve an outcome such as accuracy, cost, speed, reliability, accessibility, or usability.</item>
+          <item>1: Identifies a proposed difference, such as a new application, feature, method, integration, or adaptation.</item>
+          <item>0: No distinct contribution is identifiable; the submission repeats an existing approach without explaining a meaningful change or adaptation.</item>
+        </list>
+      </section>
+      <section title="C3. Solution design and expected effectiveness (20%)">
+        <list type="unordered">
+          <item>5: (a) Specifies a measurable success criterion and explains why the proposed target would meaningfully address the problem; (b) identifies relevant failure situations or limitations and explains the intended response, safeguard, or boundary of use.</item>
+          <item>3: (a) Explains the main inputs, processing or operating steps, and outputs; (b) identifies the role of the space technology or data, and AI/ML where required by the chosen domain; (c) explains how the intended user would use the output to address the problem.</item>
+          <item>1: Describes the proposed solution and its intended output or benefit.</item>
+          <item>0: No understandable solution is presented, or there is no explained connection between the proposed solution and the problem.</item>
+        </list>
+      </section>
+      <section title="C4. Technical and implementation feasibility (15%)">
+        <list type="unordered">
+          <item>5: (a) Supports the central technical assumption with relevant literature, calculations, analysis, or tests; (b) provides an approximate implementation timeline and major cost/resource estimates, with assumptions stated; (c) identifies the two most consequential implementation risks, or explains why fewer apply, and proposes a mitigation or fallback for each.</item>
+          <item>3: (a) Identifies the specific technologies, datasets, hardware, or services needed and explains their suitability; (b) identifies essential assumptions and dependencies, including how required resources could be accessed; (c) describes a plausible sequence of work and the main resources needed to reach an initial pilot or test.</item>
+          <item>1: Identifies a plausible technical approach and some resources it would require.</item>
+          <item>0: Provides no assessable implementation approach, or the central mechanism is technically untenable and the team provides no credible alternative.</item>
+        </list>
+      </section>
+      <section title="C5. Demonstrated development and validation (10%)">
+        <list type="unordered">
+          <item>5: (a) Demonstrates the main functions working together through a representative end-to-end use case; (b) compares results against a relevant baseline or predefined acceptance threshold; (c) tests at least one important failure condition or operating limitation and reports what the evidence shows about reliability or applicability.</item>
+          <item>3: (a) Implements or analytically demonstrates at least one core function through code, hardware, simulation, or worked data analysis; (b) provides inspectable evidence of operation, including inputs, outputs, and test conditions; (c) evaluates that function against at least one stated requirement relevant to the proposed solution.</item>
+          <item>1: Presents a developed concept through a coherent architecture, technical design, workflow, mock-up, or worked example. A functioning core component has not yet been demonstrated.</item>
+          <item>0: Presents an idea or intended benefits without an inspectable design, worked example, or implementation artifact.</item>
+        </list>
+      </section>
+      <section title="C6. Saudi-market relevance and potential impact (15%)">
+        <list type="unordered">
+          <item>5: (a) Supports the proposed local application with relevant Saudi evidence or documented stakeholder input; (b) estimates at least one measurable benefit, with transparent assumptions and a basis for the estimate; (c) explains a plausible adoption pathway, including who would operate or adopt the solution and how it would fit their workflow.</item>
+          <item>3: (a) Defines a specific Saudi user and application context; (b) identifies a local condition affecting design or deployment, such as geography, infrastructure, operating practices, or available resources; (c) explains a causal link between using the solution and a relevant benefit for that user.</item>
+          <item>1: Names a Saudi sector, user group, organization type, or issue that could benefit.</item>
+          <item>0: Provides no identifiable Saudi beneficiary or application context.</item>
+        </list>
+      </section>
+      <section title="C7. Presentation and responses to questions (10%)">
+        <list type="unordered">
+          <item>5: (a) Covers essential content within the allotted presentation time; (b) clearly distinguishes what is proposed, implemented, and tested, and separates estimates from measured results; (c) supports answers with relevant reasoning or evidence and identifies uncertainties rather than making unsupported claims.</item>
+          <item>3: (a) Presents the problem, approach, and expected benefit in a logical sequence; (b) uses readable materials and explains essential terminology, diagrams, and figures; (c) answers questions directly enough for judges to understand the team's reasoning.</item>
+          <item>1: Communicates an identifiable problem and proposed solution.</item>
+          <item>0: No assessable presentation is provided, or the audience cannot identify the problem and proposed solution.</item>
+        </list>
+      </section>
+    </section>
+    <section title="Global scoring rules and caps">
+      <list type="unordered">
+        <item>Score 0: The criterion is absent or meets its specific zero-score description.</item>
+        <item>Score 1: The submission meets the basic description for the criterion.</item>
+        <item>Score 2: The submission meets score-1 requirements and some, but not all, score-3 requirements.</item>
+        <item>Score 3: The submission meets all listed score-3 requirements.</item>
+        <item>Score 4: The submission meets score-3 requirements and some, but not all, additional score-5 requirements.</item>
+        <item>Score 5: The submission meets all score-3 requirements and all additional score-5 requirements.</item>
+        <item>If a submission's problem does not fit the chosen domain, assign 0 for Problem definition and specificity.</item>
+        <item>Failure to use AI or Machine Learning in Satellite Protection or Earth Observation and AI results in 0 for Solution design and expected effectiveness.</item>
+        <item>A score of 0 in Problem definition and specificity, Originality and Differentiation, and/or Solution design and expected effectiveness limits every other criterion to a maximum score of 2.</item>
+        <item>Tie-breakers: Saudi-market relevance and potential impact, then Technical and implementation feasibility.</item>
+        <item>Technical correctness should inform the relevant technical criterion. The Presentation criterion assesses communication and should not depend on accent, expensive graphics, or theatrical delivery.</item>
+      </list>
+    </section>
+    <section title="Criterion intent and judge questions">
+      <section title="C1. Problem definition and specificity">
+        <list type="unordered">
+          <item>Intent: Assess how clearly the team establishes the problem and the need to address it.</item>
+          <item>Questions: Does the team identify the affected user, the context in which the problem occurs, and evidence that it matters?</item>
+        </list>
+      </section>
+      <section title="C2. Originality and differentiation">
+        <list type="unordered">
+          <item>Intent: Assess the team's contribution relative to existing approaches.</item>
+          <item>Questions: What improves on existing approaches? Is the contribution meaningful within the Saudi market? An inventive application of existing technology can score highly when its advantage is explained.</item>
+        </list>
+      </section>
+      <section title="C3. Solution design and expected effectiveness">
+        <list type="unordered">
+          <item>Intent: Assess whether the design explains a convincing route from the identified problem to a useful outcome. A concept can receive full marks.</item>
+          <item>Questions: Does the team explain how the solution works and why it addresses the problem? Are inputs, method, outputs, and the role of the used technology clear?</item>
+        </list>
+      </section>
+      <section title="C4. Technical and implementation feasibility">
+        <list type="unordered">
+          <item>Intent: Assess whether there is a credible route to implementing the proposed solution. A concept can receive full marks.</item>
+          <item>Questions: Are the scientific assumptions credible? Are required data, technology, skills, and resources obtainable? Does the team recognize major limitations, estimate key costs, and propose a realistic validation plan?</item>
+        </list>
+      </section>
+      <section title="C5. Demonstrated development and validation">
+        <list type="unordered">
+          <item>Intent: Give explicit additional credit for more completed solutions; assess what the team can substantiate at the submission deadline.</item>
+          <item>Questions: Which core functions have been demonstrated? What remains conceptual or unimplemented? How complete is the demonstrated workflow? Does it cover an isolated component or a representative end-to-end use case?</item>
+        </list>
+      </section>
+      <section title="C6. Saudi-market relevance and potential impact">
+        <list type="unordered">
+          <item>Intent: Assess fit with a specific Saudi context and the value the solution could create there. A concept can receive full marks.</item>
+          <item>Questions: Is there a specific Saudi user, organization, or sector that could benefit? Does the concept account for local operating conditions? Are the expected benefits reasonably supported?</item>
+        </list>
+      </section>
+      <section title="C7. Presentation and responses to questions">
+        <list type="unordered">
+          <item>Intent: Assess communication; it should not depend on accent, expensive graphics, or theatrical delivery.</item>
+          <item>Questions: Is the explanation clear, organized, and within the time limit? Do visuals aid understanding? Does the team answer questions directly and acknowledge uncertainty?</item>
+        </list>
+      </section>
+    </section>
+  </section>
+</document>

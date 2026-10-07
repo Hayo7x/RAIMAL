@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document source_markdown="Beyond-Horizons-30-Hour-Challenge.md">
+  <metadata>
+    <document>Beyond Horizons' 30-Hour Challenge</document>
+    <source_file>Beyond Horizons’ 30-Hour Challenge.pdf</source_file>
+    <source_pages>4</source_pages>
+    <document_type>challenge_invitation_and_domain_guidelines</document_type>
+  </metadata>
+  <section title="Beyond Horizons' 30-Hour Challenge">
+    <section title="Challenge purpose">
+      <list type="unordered">
+        <item>Participants compete by proposing solutions that address the Saudi market.</item>
+        <item>Participants choose one of the pre-selected domains.</item>
+        <item>Each team supplies its own problem statement and solution within its chosen domain.</item>
+      </list>
+    </section>
+    <section title="Domains and requirements">
+      <section title="1. Satellite Protection">
+        <list type="unordered">
+          <item>Problem context: Satellites may be endangered by fluctuating space weather.</item>
+          <item>Required approach: Provide an analytical solution using AI and Machine Learning.</item>
+          <item>Required focus: Study a specific effect on the satellite.</item>
+          <item>Required output/use: Give ground control insight about possible effects to support decision-making.</item>
+        </list>
+      </section>
+      <section title="2. Non-Terrestrial Connection in Rural Working Areas">
+        <list type="unordered">
+          <item>Problem context: Many work sites in the Kingdom of Saudi Arabia (KSA) lack ground infrastructure for seamless connectivity.</item>
+          <item>Required approach: Propose a solution for specific areas.</item>
+          <item>Required outcome: Ensure seamless connectivity while protecting the working company's data.</item>
+        </list>
+      </section>
+      <section title="3. Earth Observation and AI">
+        <list type="unordered">
+          <item>Definition: Gathering, processing, and analyzing data about the planet's physical, chemical, and biological systems using satellites and sensors positioned in space.</item>
+          <item>Examples of data/content: Imagery of natural terrain, pollution, and weather patterns.</item>
+          <item>Example application areas: Urban planning, natural disaster monitoring and warning, and weather-pattern monitoring. These are examples, not an exhaustive list.</item>
+          <item>Required approach: Provide an analytical solution using AI or Machine Learning for a given context.</item>
+          <item>Required use: Help decision-making.</item>
+          <item>Data types named in the source: Hyperspectral, SAR/InSar, thermal, and optical data.</item>
+        </list>
+      </section>
+      <section title="4. Application of Space Technologies in Other Sectors">
+        <list type="unordered">
+          <item>Use any space technology to address an issue in another sector of the Saudi market.</item>
+          <item>The technology does not need to be present in the Saudi space sector.</item>
+          <item>The problem it solves must occur in another sector within the Saudi market.</item>
+        </list>
+      </section>
+    </section>
+    <section title="Participation and selection process">
+      <list type="ordered">
+        <item>Students complete the participation form.</item>
+        <item>In the form, they briefly describe their problem and proposed solution.</item>
+        <item>Based on submitted ideas, 12 teams qualify for Day 1.</item>
+        <item>At the end of Day 1, AI agents judge submissions against a published rubric.</item>
+        <item>Six teams qualify for Day 2.</item>
+        <item>On Day 2, teams present their solutions to human judges.</item>
+        <item>Human judges choose the top three teams.</item>
+      </list>
+    </section>
+    <section title="Prizes">
+      <table>
+        <row>
+          <cell field="placement">First team</cell>
+          <cell field="prize">3,000 SAR</cell>
+        </row>
+        <row>
+          <cell field="placement">Second team</cell>
+          <cell field="prize">2,000 SAR</cell>
+        </row>
+        <row>
+          <cell field="placement">Third team</cell>
+          <cell field="prize">1,000 SAR</cell>
+        </row>
+      </table>
+      <paragraph>The invitation also states that winning solutions might eventually be commercialized and used in the space industry. Winners will be connected to experts in the sector.</paragraph>
+    </section>
+    <section title="Judging criteria named in the invitation">
+      <list type="unordered">
+        <item>Specificity of the problem</item>
+        <item>Effectiveness and novelty of the solution</item>
+        <item>Relevance of the solution to the Saudi market</item>
+      </list>
+      <paragraph>The separate rubric defines the complete weighted criteria and scoring details.</paragraph>
+    </section>
+    <section title="Useful reading named in the invitation">
+      <paragraph>These resources may help students find ideas relevant to KSA's space sector:</paragraph>
+      <list type="unordered">
+        <item>KSA Space Market Report</item>
+        <item>SSA Annual Report</item>
+        <item>Space2030 Agenda Mid-term Review</item>
+      </list>
+      <paragraph>The invitation does not provide links or fuller citations for these resources.</paragraph>
+    </section>
+  </section>
+</document>

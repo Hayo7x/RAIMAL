@@ -1,0 +1,284 @@
+﻿# RAIMAL PivotWatch: Research, Product Specification, and Build Plan
+
+> **7 October 2026 refinement:** The current proposed submission is in [problem_statement.md](problem_statement.md) and [solution_statement.md](solution_statement.md), with [rubric alignment](rubric_alignment.md). Those files narrow the initial crop/geography, specify a real ML component, and update the competitor comparison to include OneSoil’s AI priorities and Valley Insights. This document remains background research; its rules-only MVP option is superseded for the Earth Observation and AI submission.
+
+**Team:** RAIMAL  
+**Category:** Earth Observation and AI  
+**Prepared:** 7 October 2026  
+**Recommendation:** Build PivotWatch as a satellite-led inspection and initial-diagnosis support product for center-pivot farms, with uncertainty and human confirmation built into the workflow.
+
+## 1. Executive summary
+
+PivotWatch analyzes crop condition within center-pivot fields and over time. It identifies persistent, spatially unusual patterns, ranks locations for field inspection, and combines satellite evidence with weather, crop calendar, irrigation events, equipment telemetry (if available), and technician records to produce a ranked set of possible explanations and next checks.
+
+The product should answer two questions:
+
+1. **Where should we inspect first?**
+2. **Given the available evidence, what are plausible causes and what observation would help distinguish them?**
+
+It must not claim that satellite imagery alone proves a broken sprinkler or other mechanical defect. Vegetation stress is non-specific; satellite observations are intermittent and can lag an equipment event. A technician or agronomist confirms the cause.
+
+**Best initial customer hypotheses:** large commercial farm operators, irrigation-maintenance contractors and agronomy service providers. Al-Jouf and Wadi Al-Dawasir are candidate geographies, subject to customer and data access. The first commercial test should be a paid or structured pilot, not a claimed national market size.
+
+**Overall assessment:** strong hackathon fit and high potential impact; technically feasible for anomaly prioritization; initial diagnosis is feasible as explainable decision support; Saudi diagnostic accuracy, buyer willingness to pay, ROI and water savings remain unproven.
+
+## 2. Problem, objective, and impact
+
+Saudi Arabia has a material agricultural water-efficiency challenge. FAO reports that FAO and the Saudi Irrigation Organization established demonstration farms and training programs for efficient irrigation. By June 2024, 21 farms had been selected from 252 assessed sites, and complete irrigation systems had been installed on 17. GASTAT reported agricultural consumption of non-renewable groundwater of 9,356 million cubic meters in 2023, 7% below 2022. These establish policy and resource relevance; they do not prove a customer will buy PivotWatch or that PivotWatch will save water.
+
+Large operations have many fields, equipment records and inspection tasks. Field-wide averages can conceal localized spatial patterns. A technician may need to inspect a large area to find a problem. PivotWatch aims to reduce search effort and make the inspection and repair history visible across a portfolio.
+
+### Objectives
+
+- Detect persistent within-pivot crop-condition anomalies using satellite time series.
+- Rank field locations for inspection with evidence, confidence and data-quality information.
+- Combine available weather, crop, management and equipment context to rank possible causes.
+- Tell the user what evidence supports or weakens each hypothesis and what to check next.
+- Record inspection findings, repairs and later crop-signal changes.
+- Build a locally validated dataset over time, rather than claiming Saudi accuracy before collecting labels.
+
+### Expected results
+
+**Hackathon prototype:** a map with selected pivot boundaries, dated imagery, condition indices, sector anomaly ranking, an initial hypothesis panel, technician record form and before/after observation display. Sample or simulated evidence must be labelled.
+
+**Pilot outcomes to measure:** alert confirmation rate; diagnosis top-1/top-3 agreement with field inspection; confidence calibration; false alarms per pivot-season; time from alert to inspection; technician search time; repair follow-up rate; and user-reported usefulness.
+
+**Not yet demonstrated:** specific irrigation faults diagnosed accurately in Saudi Arabia, water conserved, yield protected, inspection costs reduced, or a profitable subscription price.
+
+## 3. Product: from anomaly to initial diagnostic support
+
+### User journey
+
+1. Manager selects a farm, pivot, crop and relevant season.
+2. The service loads available satellite scenes and marks cloud/shadow contamination, missing observations and acquisition dates.
+3. The system computes vegetation indicators for sectors and compares them with the pivot’s temporal baseline and comparable sectors.
+4. It ranks persistent anomalies and presents coordinates, map/image evidence, time trend and data confidence.
+5. It combines the anomaly with weather, crop calendar, irrigation/operation logs and optional pressure/flow/telemetry.
+6. It shows a ranked list of possible explanations, supporting and contradicting evidence, unknown inputs and recommended checks.
+7. Technician records findings, optional photos and measurements, suspected cause, actual cause (if known), repair and date.
+8. Later valid satellite observations show whether the vegetation signal changed. The interface calls this “observed post-repair change,” not proof that the repair caused recovery or saved water.
+
+### Example diagnostic output
+
+> **Possible uneven water delivery — medium confidence.** A stressed arc persists across three usable optical observations and overlaps a reported irrigation run. Recent hot, dry weather can contribute to field stress, but does not by itself explain the localized pattern. No pressure or flow data are available. **Suggested check:** inspect the sprinklers and pressure along the affected arc; compare the result with pivot telemetry if available.
+
+Possible hypotheses should include:
+
+- Possible irrigation-delivery non-uniformity (e.g., pressure, emitter/nozzle, operation or mechanical issue).
+- Broad weather- or crop-demand-related stress.
+- Crop, soil or management-related stress (e.g., growth stage, salinity, nutrient, disease, harvest or field operation).
+- Image/data artifact or insufficient evidence.
+
+The system can present multiple hypotheses and an abstain/insufficient-evidence result. It should not force one answer.
+
+## 4. Evidence and proof, by claim
+
+### 4.1 Saudi need and local context
+
+- FAO/SIO demonstration-farm work is direct evidence of public investment in irrigation efficiency, training and local technology adoption. FAO’s reported program figures include 21 farms selected from 252 assessed and 17 systems installed by June 2024. This does not independently validate PivotWatch demand.
+- GASTAT’s water accounts report 9,356 million m³ of agricultural non-renewable groundwater consumption in 2023, a 7% decrease from 2022. This makes water efficiency a material national concern; it is not an addressable-market estimate.
+- A Saudi national-scale study mapped center-pivot fields from Landsat time series. This is strong local precedent for the geospatial object and potential field inventory.
+- KAUST-supported research studied irrigation events and crop dynamics using Sentinel-1 and Sentinel-2 in center-pivot fields. KSU’s Precision Agriculture Research Chair describes VRI, crop sensing and irrigation performance projects. These demonstrate local scientific activity, not a commercially validated diagnostic model.
+- Invest Saudi’s Al-Jouf report identifies Al-Jouf Agricultural Development Company as a major regional operator over 60,000 hectares in Busaita, illustrating the presence of large agribusiness buyers. Verify current operating details and whether the relevant hectares use center pivots before treating this as a prospect.
+
+### 4.2 Satellite and AI feasibility
+
+- Copernicus Sentinel-2 data are open, with four bands at 10 m and six bands at 20 m, and a stated five-day revisit frequency at the Equator. A scheduled revisit is not a guarantee of a cloud-free or analytically usable scene. Ten-meter pixels can also mix crop, soil and edge effects.
+- A 2025 Brazilian study processed Sentinel-2 data for center pivots and classified categories including emitters, mechanical problems and low pressure. It reports strong overall metrics, but underrepresented mechanical issue classes were weaker; it used artificial-pattern pretraining and then real data. This supports a research path, but not direct transfer of its label accuracy to Saudi crops, seasons or equipment.
+- Published satellite-derived irrigation-uniformity work (including satellite-derived Christiansen Uniformity Coefficient analyses) supports relative spatial uniformity metrics as a research feature. Such coefficients summarize spatial variability; they do not identify the unique physical cause.
+- A 2021 review of crop-monitoring challenges explains that water, nutrient, disease and pest stresses can overlap spectrally. Red-edge indices may add information related to chlorophyll/nutrient status but do not uniquely identify a cause.
+- A low-cost in-canopy sprinkler-monitoring prototype directly detects/locates detached sprinklers. This is complementary evidence that equipment-side observations can materially strengthen a diagnosis beyond crop-response signals.
+
+### 4.3 Diagnostic modeling evidence
+
+- A 2025 Bayesian fault-diagnosis framework combines meteorological, soil and equipment variables. Its conditional probabilities were based on scenario modeling and expert logic because empirical information was lacking. It is an architecture precedent, not field-proven accuracy.
+- LeakNet is an open-source example of an irrigation leak-detection pipeline using pressure/flow sensor signals and a 1D CNN. Check repository data provenance, field validation and license before reuse.
+- NASA POWER supplies daily global meteorological and solar time series. This can contextualize temperature, rain and atmospheric demand. Its gridded daily data are not a sensor at a pivot and should not be treated as field-scale truth.
+- FAO WaPOR provides open satellite-derived water productivity and evapotranspiration information for Africa and the Near East. Check the version, pixel size, temporal aggregation and coverage for the selected farm; it is a contextual water-productivity source rather than a pivot-fault detector.
+
+### 4.4 Commercial market and competition
+
+Evidence supports a real category, not a proven PivotWatch market:
+
+- CropX markets farm-management, irrigation, sensor, weather and satellite capabilities.
+- OneSoil markets satellite monitoring, anomaly views and scouting workflows.
+- Valley 365/AgSense offers remote monitoring and control and states compatibility with any brand of center pivot for certain solutions. Thus “equipment independent” alone is not a defensible unique differentiator.
+- The sharper hypothesis to test is a satellite-led sector anomaly-to-maintenance workflow: persistent map-based alerts, contextual diagnostic hypotheses, technician findings and post-repair follow-up across customer fleets. Competitors may already have some adjacent capabilities; conduct feature interviews and demos before claiming white space.
+- Potential customers include large operators and service contractors. The value proposition and buyer budget must be established in interviews. Test pricing per pivot, per hectare and contractor portfolio; do not invent a price or ROI before evidence.
+
+### 4.5 Open-source projects, datasets and discussion
+
+- Crop Water Stress STAC: example STAC-based Sentinel-2/Landsat processing pipeline; study area is Egypt, so Saudi transfer is unproven.
+- IrrMap: open irrigation-method dataset/models and pipeline. Inspect the license, documentation, labels and geographic transferability.
+- AgriSat-AI: example Sentinel-1/Sentinel-2 classification and advisory project. Treat as an implementation reference, not peer-reviewed validated performance.
+- LeakNet: sensor-based leak anomaly example.
+- arXiv methods on global irrigation prediction and multiscale spatiotemporal irrigation detection can inform temporal features and weak-label strategies; broad irrigation detection is not irrigation fault diagnosis.
+- Reddit posts and threads offer practitioner anecdotes about pivot operations, image-data access, software needs and founder challenges. They are useful for interview questions but are not reliable demand or technical validation.
+
+## 5. Data plan and diagnostic value
+
+| Data | Potential contribution | Key limitation |
+|---|---|---|
+| Sentinel-2 NDVI/EVI/NDRE and time series | Crop-response pattern, sector contrast, persistence, phenology | Optical clouds; revisit gaps; 10/20 m scale; stress is non-specific and may lag equipment event |
+| Sentinel-1 SAR | Additional observations through clouds; surface/vegetation moisture response | Signal depends on crop structure, surface, incidence and processing; not a direct sprinkler sensor |
+| Weather station or NASA POWER | Heat/rain/wind/evaporative-demand context; broad stress explanation | Gridded weather is too coarse to establish conditions in every pivot sector |
+| Crop calendar and field operations | Crop-stage, harvest, planting, fertilizer, pesticide and irrigation context | Often incomplete or inconsistent; must be customer supplied/verified |
+| Soil map, salinity and lab readings | Persistent soil-zone explanations and confounder control | Resolution/age/sample coverage may not match sector scale |
+| Irrigation schedule and pivot telemetry | Whether pivot was running, position/speed, stop/reverse events | Vendor-specific or missing; logs do not prove water reached each nozzle |
+| Pressure, flow, pump status, nozzle configuration | Direct evidence to distinguish hydraulic or equipment hypotheses | Requires installed, calibrated sensors and data integration |
+| Technician observations/photos/measurements | Ground-truth labels and practical confirmation | Human observation quality and label consistency need protocols |
+| Landsat thermal / UAV thermal | Canopy temperature and water-stress context | Coarser/less frequent satellite thermal data; UAV requires field operations; not part of Sentinel-2 |
+| FAO WaPOR ET/water productivity | Broader seasonal water use/productivity context | Product scale and aggregation may be unsuitable for individual sectors; not fault diagnosis |
+
+## 6. Recommended AI and system design
+
+### MVP system architecture
+
+1. **Data ingestion:** customer boundary, Sentinel-2 scenes, optional weather time series and manually entered crop/irrigation context.
+2. **Quality control:** cloud/shadow mask, valid pixel counts, acquisition metadata, minimum-data gate; do not silently fill missing observations.
+3. **Geospatial processing:** pivot center/radius and sector geometry; calculate index summaries for angular/radial bins; exclude non-crop and edge pixels.
+4. **Temporal anomaly engine:** per-sector robust seasonal baseline and comparisons to nearby sectors; persistence rules and change-point flags. Keep the MVP interpretable.
+5. **Context layer:** weather, crop stage and operation timeline; display data provenance and temporal alignment.
+6. **Initial diagnosis:** rules or Bayesian network with transparent priors/evidence weights, multiple hypotheses and explicit abstention. Avoid an LLM as the causal inference engine; an LLM may phrase a structured result but must not invent evidence.
+7. **Work-order feedback:** inspection task, finding, photo, cause, repair and follow-up.
+8. **Audit and evaluation:** retain input timestamps, index values, model version, evidence factors and feedback to support reproducibility and learning.
+
+### Model progression
+
+- **Hackathon:** rules/scorecard or small Bayesian-style graph; use explicit, labeled demo scenarios. Demonstrate uncertainty and missing evidence.
+- **Pilot:** collect confirmed cases; compare interpretable rules, logistic regression/gradient-boosted trees and Bayesian network. Calibrate per crop/season where sample sizes permit.
+- **Scale:** only evaluate temporal deep learning or image classifiers after gathering diverse labeled observations over multiple farms, crops, seasons and equipment types. Split validation by farm and season to reduce leakage and test domain shift.
+
+### Evaluation metrics
+
+- Anomaly: precision/recall of inspected zones, spatial overlap, persistence, lead time and alerts per pivot-season.
+- Diagnosis: class-wise precision/recall, top-k accuracy, probability calibration/Brier score, abstention quality, confusion matrix and false alarms per class.
+- Workflow: time-to-inspection, technician search time, confirmation rate, completed work orders and user adoption.
+- Business: pilot conversion, willingness-to-pay interviews, renewal intent and measured customer value. Water savings require flow/volume or a defensible calibrated water-accounting method and a comparison design.
+
+## 7. MVP scope and roadmap
+
+### Minimum viable product
+
+- One Saudi pilot area and a small set of pivots.
+- Manually imported/drawn pivot boundaries.
+- Sentinel-2 time-series retrieval and cloud/shadow quality display.
+- NDVI plus optional NDRE; sector grid and robust baseline anomaly ranking.
+- Ranked map queue with date, evidence, location and confidence.
+- Initial diagnostic panel with 2–4 hypotheses, supporting/contradicting evidence, missing inputs and recommended discriminating check.
+- Technician inspection form and repair record.
+- Before/after signal view when later valid imagery exists.
+- Clear labels distinguishing observed evidence, model inference, user-entered data and synthetic demo values.
+
+### Later features
+
+- Sentinel-1 fusion and more advanced temporal models.
+- Crop-specific calendars, soil/salinity layers, local weather stations and irrigation-demand context.
+- Pivot telemetry, pressure/flow and pump/nozzle data integrations.
+- Arabic/English technician workflow, offline/mobile field support, WhatsApp/SMS/email alerts.
+- Portfolio benchmarking, contractor work orders, SLA and repair-verification reports.
+- Customer roles, data governance, security, retention and API integrations.
+- Validated water-accounting and economics module after sufficient ground measurements.
+
+## 8. Risks and mitigations
+
+| Risk | Mitigation |
+|---|---|
+| Vegetation stress has many causes | Present ranked hypotheses and evidence; include non-irrigation causes and abstention; technician confirms |
+| Optical gaps or cloud artifacts | Quality masks, valid-pixel thresholds, clear missing-data display; optional radar/context layers |
+| Satellite pixel size too coarse for the fault | Report sector-scale location, not nozzle-level pinpointing; use telemetry or field inspection for localization |
+| Crop response lags a fault | Frame as prioritization and follow-up, not real-time fault alarm |
+| Model transfer from Brazil/other regions fails in KSA | Local farm/season validation and domain-shift monitoring; no borrowed accuracy claims |
+| Sparse labels and feedback bias | Standard inspection forms, reasons for not-inspected alerts, label confidence, periodic audits |
+| Incumbents offer overlapping platform features | Validate product gap directly; focus on evidence-linked maintenance triage and workflow outcomes |
+| Water-saving claims exceed evidence | Require flow data or validated accounting and comparison design; otherwise report only signal and process metrics |
+| Customer data or imagery-use concerns | Customer-controlled boundaries, clear data rights, least-privilege access and retention policies |
+
+## 9. Customer discovery and commercial validation
+
+Interview 8–12 stakeholders as a starting discovery sprint (not a statistically representative sample): farm managers, irrigation technicians, contractors and agronomists. Ask:
+
+- What triggers an inspection today? How are pivots and sectors prioritized?
+- What telemetry and maintenance records already exist? Which equipment brands and systems are used?
+- What are common failure modes and how are they confirmed?
+- How often do inspections find no actionable fault? What is the cost of delay or scouting?
+- Would a map-based shortlist with hypotheses change dispatch or maintenance behavior?
+- Who owns the budget and procurement? What is the current alternative?
+- Would they share historical imagery boundaries and technician outcomes for a pilot?
+- What subscription unit is natural: pivot, hectare, farm or contractor portfolio?
+
+Run a pilot with pre-agreed outcomes. Compare PivotWatch alerts against technician findings, include unalerted sectors in sampling to estimate missed cases, and report results by crop/season. Avoid selecting only successful cases.
+
+## 10. Three candidate ideas and desk-based test
+
+The following is a desk-research feasibility comparison, not field testing or customer validation.
+
+| Idea | Impact | Data access | Demo clarity | Saudi evidence | Buyer clarity | Validation burden | Rank |
+|---|---|---|---|---|---|---|---|
+| **PivotWatch: anomaly triage + initial diagnostic support** | High | High | High | High for pivots/irrigation context; direct diagnostic model evidence is non-Saudi | High | Medium-high | **1** |
+| **Saudi Pivot Ledger: pivot inventory/change tracking** | Medium | High | High | Very high | Medium | Low-medium | 2 |
+| **Water Productivity Watch: ET/productivity benchmark** | Very high | Medium | Medium | Medium | Medium | High | 3 |
+
+**PivotWatch** has the strongest balance for this hackathon because it focuses on a visible operational action while using accessible imagery and Saudi-specific precedent. Add initial diagnosis as cautious, evidence-linked hypotheses. Its key risk is local diagnostic validity and product overlap with farm platforms.
+
+**Saudi Pivot Ledger** maps pivot locations, boundaries, seasonal activity and change for farms or agencies. Saudi national-scale mapping research makes technical feasibility credible. The challenge is recurring willingness to pay: mapping may be an enabling dataset rather than a frequent operational product.
+
+**Water Productivity Watch** benchmarks seasonal crop output and satellite-based water-use indicators across a farm portfolio. It has strong potential impact but needs careful ET validation, ground water data and crop/management context. It is better positioned as a later PivotWatch module than the first build.
+
+## Source directory
+
+For a categorized, annotated, quick-reference catalog of source links, see [pivotwatch_sources.md](pivotwatch_sources.md).
+
+## 11. Sources
+
+### Saudi need, statistics and local work
+
+1. FAO, “From scarcity to sustainability: a leap toward efficient irrigation in Saudi Arabia” (2024): https://www.fao.org/neareast/news/stories/details/from-scarcity-to-sustainability--a-leap-toward-efficient-irrigation-in-saudi-arabia/
+2. FAO, “FAO and SIO launch intensive training programme on smart irrigation technologies for lead farmers in Saudi Arabia” (2025): https://www.fao.org/countryprofiles/news-archive/detail-news/en/c/1737890/
+3. GASTAT, Water Accounts Publication 2023: https://www.stats.gov.sa/documents/20117/2067030/Water%2BAccounts%2BPublication%2B2023%2BEN.pdf/11312e80-41b6-1eb0-a14f-177a790590e9?t=1735923570932
+4. “Center pivot field delineation and mapping: A satellite-driven object-based image analysis approach for national scale accounting” (Saudi Arabia, 2021): https://doi.org/10.1016/j.isprsjprs.2021.02.019
+5. “Monitoring Irrigation Events and Crop Dynamics Using Sentinel-1 and Sentinel-2 Time Series” (2022): https://www.mdpi.com/2072-4292/14/5/1205
+6. KSU Precision Agriculture Research Chair, community/research projects: https://parc.ksu.edu.sa/en/node/1208
+7. Invest Saudi, Al-Jouf fruits, vegetables and grains report: https://investsaudi.sa/backend/wp-content/uploads/2026/01/aljouf-report-digital-en-nov2024.pdf
+
+### Satellite diagnosis, models and irrigation performance
+
+8. “Advancing irrigation uniformity monitoring through remote sensing: A deep-learning framework for identifying the source of non-uniformity” (2025): https://www.sciencedirect.com/science/article/pii/S0378377425000903
+9. “Revealing irrigation uniformity with remote sensing: A comparative analysis of satellite-derived uniformity coefficient” (2024): https://ideas.repec.org/a/eee/agiwat/v301y2024ics0378377424002798.html
+10. “Novel Monitoring System for Detecting Malfunctioning In-Canopy Sprinklers on a Center Pivot Irrigation System” (2021): https://doi.org/10.1061/%28ASCE%29IR.1943-4774.0001559
+11. “Bayesian Analysis for Fault Diagnosis Framework in Smart Irrigation and Fertilization Systems” (2025): https://doi.org/10.1016/j.procs.2025.07.199
+12. “Challenges and opportunities in remote sensing-based crop monitoring: a review” (2023): https://pmc.ncbi.nlm.nih.gov/articles/PMC10029851/
+13. “Effects of Travel Speed and Collector on Evaluation of the Water Application Uniformity of a Center Pivot Irrigation System” (2020): https://www.mdpi.com/2073-4441/12/7/1916
+14. DEPIVOT: “A model for center-pivot design and evaluation” (2012): https://www.sciencedirect.com/science/article/pii/S0168169912001457
+15. Sentinel-2 official data documentation, Copernicus Data Space: https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-missions/sentinel-2
+
+### Weather and water-use data
+
+16. NASA POWER Daily API documentation: https://power.larc.nasa.gov/docs/services/api/temporal/daily/
+17. FAO WaPOR overview: https://www.fao.org/land-water/resources/tools/databases/wapor/en
+18. FAO WaPOR data and coverage: https://www.fao.org/in-action/remote-sensing-for-water-productivity/wapor-data/
+
+### Existing products and open-source references
+
+19. CropX platform: https://cropx.com/
+20. OneSoil platform: https://onesoil.ai/en/platform
+21. Valley Irrigation remote management: https://www.anz.valleyirrigation.com/remote-management
+22. Crop Water Stress STAC GitHub: https://github.com/NourNegm85/Crop-Water-Stress-STAC
+23. IrrMap GitHub: https://github.com/Nibir088/IrrMap
+24. AgriSat-AI GitHub: https://github.com/dhiraj0-del/AgriSat-AI
+25. LeakNet GitHub: https://github.com/nikas-belogolov/leaknet
+26. arXiv, global irrigation prediction using Sentinel-2 time series: https://arxiv.org/abs/2012.07658
+27. arXiv, multiscale spatiotemporal smallholder irrigation detection: https://arxiv.org/abs/2202.04239
+
+### Community discussions (anecdotal; not demand proof)
+
+28. r/farming, center-pivot adoption outside the US and Saudi Arabia: https://www.reddit.com/r/farming/comments/gdmgsm
+29. r/remotesensing, free imagery/data for agronomy: https://www.reddit.com/r/remotesensing/comments/wut8me
+30. r/Irrigation, nozzle-size placement discussion: https://www.reddit.com/r/Irrigation/comments/13jdt9n/center_pivot_irrigation_someone_screwed_up_all_my/
+31. r/GIS, crop-monitoring product/user adoption discussion: https://www.reddit.com/r/gis/comments/1s5dsqf/built_a_crop_monitoring_platform_on_free/
+
+## 12. Final recommendation
+
+Build PivotWatch as an **inspection and diagnosis-support workflow**, not a fault oracle. Use satellite data to find persistent patterns, weather and farm records to contextualize them, optional equipment data to strengthen them, and technicians to confirm them. The clearest path to a sellable product is proving that the ranked, evidence-linked work queue improves inspection decisions for one real operator or contractor, then expanding the diagnosis model as verified local cases accumulate.
+
+

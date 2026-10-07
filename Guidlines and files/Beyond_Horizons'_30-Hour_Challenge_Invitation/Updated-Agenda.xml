@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document source_markdown="Updated-Agenda.md">
+  <metadata>
+    <document>Updated Agenda</document>
+    <source_file>UpdatedAgenda.pdf</source_file>
+    <source_pages>2</source_pages>
+    <document_type>event_schedule</document_type>
+  </metadata>
+  <section title="Updated Agenda">
+    <paragraph>Times are reproduced exactly as printed. The source does not specify AM/PM, date, or time zone.</paragraph>
+    <section title="Day 1">
+      <table>
+        <row>
+          <cell field="event">Brief Icebreaker</cell>
+          <cell field="time">5:00-5:30</cell>
+        </row>
+        <row>
+          <cell field="event">Maghrib</cell>
+          <cell field="time">5:30-5:45</cell>
+        </row>
+        <row>
+          <cell field="event">Working Session 1 and Guidance</cell>
+          <cell field="time">5:45-7:45</cell>
+        </row>
+        <row>
+          <cell field="event">Isha</cell>
+          <cell field="time">7:45-8:00</cell>
+        </row>
+        <row>
+          <cell field="event">Working Session 2</cell>
+          <cell field="time">8:00-10:00</cell>
+        </row>
+      </table>
+    </section>
+    <section title="Day 2">
+      <table>
+        <row>
+          <cell field="event">Working Session 1</cell>
+          <cell field="time">4:00-5:30</cell>
+        </row>
+        <row>
+          <cell field="event">Maghrib</cell>
+          <cell field="time">5:30-5:45</cell>
+        </row>
+        <row>
+          <cell field="event">Presentations</cell>
+          <cell field="time">5:45-7:30</cell>
+        </row>
+        <row>
+          <cell field="event">Closing Ceremony</cell>
+          <cell field="time">9:00-9:30</cell>
+        </row>
+      </table>
+    </section>
+  </section>
+</document>
