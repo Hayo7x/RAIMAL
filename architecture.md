@@ -1,4 +1,4 @@
-# PivotWatch architecture and data pipeline
+# RAIMAL architecture and data pipeline
 
 Prepared 7 October 2026. The original presentation architecture and future implementation blueprint, now accompanied by a runnable synthetic-data local MVP. The current app demonstrates a bounded replay, Isolation Forest ranking, basic quality/history/persistence gates, a technician workflow, local SQLite records, and exports. Real Sentinel-2 processing and field validation remain future work; see [MVP documentation](MVP.md). Read alongside [presentation narrative](presentation_outline.md), [data acquisition](data_acquisition.md), [model selection](model_selection.md), and the [solution statement](solution_statement.md).
 

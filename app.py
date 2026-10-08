@@ -8,7 +8,7 @@ from src.pivotwatch.engine import analyze
 from src.pivotwatch.storage import init_db, list_inspections, save_inspection
 from src.pivotwatch.ui import apply_style, brand, landing
 
-st.set_page_config(page_title="PivotWatch | From pattern to purpose", page_icon="◉", layout="wide")
+st.set_page_config(page_title="RAIMAL | From pattern to purpose", page_icon="◉", layout="wide")
 apply_style()
 nav_left, nav_right = st.columns([1, 1])
 with nav_left:
@@ -112,7 +112,7 @@ st.divider()
 st.subheader("Take the evidence with you")
 bundle={"synthetic_demo":True,"run_id":result.run_id,"analysis_date":str(pd.Timestamp(replay_day).date()),"model":result.model_name,"threshold":result.threshold,"gates":result.gates,"tasks":tasks.to_dict(orient="records"),"limitations":["Synthetic observations; no real satellite raster was processed.","Anomaly scores are rankings, not probabilities or fault diagnoses.","No field performance is validated."]}
 cols=st.columns(2)
-cols[0].download_button("Download task CSV",tasks.to_csv(index=False).encode("utf-8"),file_name=f"pivotwatch-{result.run_id}.csv",mime="text/csv",disabled=tasks.empty)
-cols[1].download_button("Download evidence JSON",json.dumps(bundle,indent=2,default=str).encode("utf-8"),file_name=f"pivotwatch-{result.run_id}.json",mime="application/json")
+cols[0].download_button("Download task CSV",tasks.to_csv(index=False).encode("utf-8"),file_name=f"raimal-{result.run_id}.csv",mime="text/csv",disabled=tasks.empty)
+cols[1].download_button("Download evidence JSON",json.dumps(bundle,indent=2,default=str).encode("utf-8"),file_name=f"raimal-{result.run_id}.json",mime="application/json")
 with st.expander("What this MVP does and does not prove"):
     st.markdown("""**Demonstrates:** dated observations, spatial anomaly ranking, quality and persistence gates, a technician inspection question, local record keeping, and reproducible exports.\n\n**Does not demonstrate:** Sentinel-2 download or raster processing, a verified field boundary or crop calendar, a confirmed irrigation fault, diagnostic accuracy, time savings, water savings, or yield protection. Synthetic pattern perturbations exercise the workflow only.""")

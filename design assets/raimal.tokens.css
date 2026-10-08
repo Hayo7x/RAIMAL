@@ -1,0 +1,31 @@
+/* RAIMAL identity v1.0 | Reference tokens; importing does not restyle components. */
+:root {
+  --raimal-field: #5A9367;
+  --raimal-grove: #44633F;
+  --raimal-earth: #3F4B3B;
+  --raimal-ink: #263329;
+  --raimal-chalk: #F6F7F2;
+  --raimal-white: #FFFFFF;
+  --raimal-mist: #E7EDE2;
+  --raimal-line: #CBD5C5;
+  --raimal-muted: #596653;
+  --raimal-water: #245C73;
+  --raimal-caution: #805411;
+  --raimal-caution-bg: #FFF1D6;
+  --raimal-critical: #A13932;
+  --raimal-critical-bg: #FBEAE6;
+  --raimal-font-sans: "Segoe UI", Arial, sans-serif;
+  --raimal-font-mono: Consolas, monospace;
+  --raimal-space-4: 4px;
+  --raimal-space-8: 8px;
+  --raimal-space-12: 12px;
+  --raimal-space-16: 16px;
+  --raimal-space-24: 24px;
+  --raimal-space-32: 32px;
+  --raimal-space-48: 48px;
+  --raimal-space-64: 64px;
+  --raimal-space-96: 96px;
+  --raimal-radius-control: 8px;
+  --raimal-radius-panel: 16px;
+  --raimal-focus: 0 0 0 3px #FFFFFF, 0 0 0 6px #245C73;
+}

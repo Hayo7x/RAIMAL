@@ -1,0 +1,56 @@
+[
+  {
+    "foreground": "ink",
+    "background": "chalk",
+    "ratio": 12.28,
+    "normal_text_AA": true
+  },
+  {
+    "foreground": "earth",
+    "background": "white",
+    "ratio": 9.21,
+    "normal_text_AA": true
+  },
+  {
+    "foreground": "grove",
+    "background": "white",
+    "ratio": 6.77,
+    "normal_text_AA": true
+  },
+  {
+    "foreground": "muted",
+    "background": "chalk",
+    "ratio": 5.65,
+    "normal_text_AA": true
+  },
+  {
+    "foreground": "white",
+    "background": "grove",
+    "ratio": 6.77,
+    "normal_text_AA": true
+  },
+  {
+    "foreground": "water",
+    "background": "white",
+    "ratio": 7.36,
+    "normal_text_AA": true
+  },
+  {
+    "foreground": "caution",
+    "background": "caution-bg",
+    "ratio": 5.89,
+    "normal_text_AA": true
+  },
+  {
+    "foreground": "critical",
+    "background": "critical-bg",
+    "ratio": 5.72,
+    "normal_text_AA": true
+  },
+  {
+    "foreground": "field",
+    "background": "white",
+    "ratio": 3.62,
+    "normal_text_AA": false
+  }
+]

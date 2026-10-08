@@ -1,10 +1,12 @@
-# PivotWatch: presentation-ready technical narrative
+# RAIMAL: presentation-ready technical narrative
+
+**Current planning entry point (8 October 2026):** Use [the complete presentation plan](presentation_plan.md) and [requirement-by-requirement review](presentation_rubric_review.md). This earlier technical outline includes pre-MVP status statements and is not the current full pitch.
 
 Prepared 7 October 2026. The original presentation plan preceded implementation of the local MVP. The app now provides an optional synthetic-data workflow demo; it does not provide real satellite analysis or validated farm findings. Use these four slides within the broader problem/solution pitch, and consult [MVP documentation](MVP.md) before deciding whether to demonstrate the app. [Detailed architecture](architecture.md) · [Data sources](data_acquisition.md) · [Model decision](model_selection.md).
 
 ## Slide 1 — From satellite observation to a field inspection
 
-**Main message:** PivotWatch proposes a traceable way to prioritize persistent crop anomalies for inspection.
+**Main message:** RAIMAL proposes a traceable way to prioritize persistent crop anomalies for inspection.
 
 ```mermaid
 flowchart LR

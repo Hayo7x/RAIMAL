@@ -1,4 +1,4 @@
-# RAIMAL PivotWatch: Problem Statement
+# RAIMAL: Problem Statement
 
 **Domain:** Earth Observation and AI  
 **Prepared:** 7 October 2026  
@@ -33,7 +33,7 @@ The potato focus reduces differences caused by mixing crops and repeated fodder 
 
 | Evidence | What it supports | What it does not establish |
 |---|---|---|
-| Saudi potato study: three 30 ha pivots; reported high-yield zones averaged above 40 t/ha and low-yield zones below 21 t/ha. [P1] | Material spatial variation can exist within the selected crop and geography. | That irrigation faults caused the variation, or that PivotWatch would recover the yield difference. |
+| Saudi potato study: three 30 ha pivots; reported high-yield zones averaged above 40 t/ha and low-yield zones below 21 t/ha. [P1] | Material spatial variation can exist within the selected crop and geography. | That irrigation faults caused the variation, or that RAIMAL would recover the yield difference. |
 | GASTAT: 9,356 million m³ of agricultural non-renewable groundwater consumption in 2023. [P2] | Water management matters at national scale. | Pivot-specific losses, current fault prevalence, addressable revenue, or achievable savings. |
 | FAO–SIO irrigation program: 21 demonstration farms selected from 252 assessed sites; 17 systems installed by June 2024. [P3] | Local institutions are investing in irrigation adoption and practical training. | A partnership with RAIMAL or demand for this particular product. |
 | A Valley customer account describes irrigation problems missed despite daily field visits. [P4] | A documented operational example of inspection limitations. | Saudi incidence rates or independently verified product performance; this is overseas vendor-published testimony. |

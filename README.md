@@ -1,6 +1,6 @@
-# RAIMAL — PivotWatch
+# RAIMAL
 
-PivotWatch is a satellite assisted inspection workflow for center pivot irrigation maintenance. It ranks unusual crop patterns by pivot sector and radial distance, then turns persistent evidence into an inspection question that a technician can answer and record.
+RAIMAL is a satellite assisted inspection workflow for center pivot irrigation maintenance. It ranks unusual crop patterns by pivot sector and radial distance, then turns persistent evidence into an inspection question that a technician can answer and record.
 
 ## Current deliverable
 
@@ -37,7 +37,8 @@ See [MVP documentation](MVP.md) for setup details, app behavior, implementation 
 - [Problem statement](problem_statement.md)
 - [Solution statement](solution_statement.md)
 - [Rubric alignment and pitch guide](rubric_alignment.md)
-- [Presentation technical narrative](presentation_outline.md)
+- [Presentation plan](presentation_plan.md) and [complete rubric review](presentation_rubric_review.md)
+- [Earlier presentation technical narrative](presentation_outline.md)
 - [Background research](pivotwatch_research.md) and [source directory](pivotwatch_sources.md)
 
 The research and proposal documents were prepared 7 October 2026. They describe intended product behavior and validation targets; those targets are not MVP performance results. The MVP implementation is separately described in [MVP.md](MVP.md).

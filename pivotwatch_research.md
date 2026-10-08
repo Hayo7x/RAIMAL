@@ -1,15 +1,15 @@
-﻿# RAIMAL PivotWatch: Research, Product Specification, and Build Plan
+﻿# RAIMAL: Research, Product Specification, and Build Plan
 
 > **7 October 2026 refinement:** The current proposed submission is in [problem_statement.md](problem_statement.md) and [solution_statement.md](solution_statement.md), with [rubric alignment](rubric_alignment.md). Those files narrow the initial crop/geography, specify a real ML component, and update the competitor comparison to include OneSoil’s AI priorities and Valley Insights. This document remains background research; its rules-only MVP option is superseded for the Earth Observation and AI submission.
 
 **Team:** RAIMAL  
 **Category:** Earth Observation and AI  
 **Prepared:** 7 October 2026  
-**Recommendation:** Build PivotWatch as a satellite-led inspection and initial-diagnosis support product for center-pivot farms, with uncertainty and human confirmation built into the workflow.
+**Recommendation:** Build RAIMAL as a satellite-led inspection and initial-diagnosis support product for center-pivot farms, with uncertainty and human confirmation built into the workflow.
 
 ## 1. Executive summary
 
-PivotWatch analyzes crop condition within center-pivot fields and over time. It identifies persistent, spatially unusual patterns, ranks locations for field inspection, and combines satellite evidence with weather, crop calendar, irrigation events, equipment telemetry (if available), and technician records to produce a ranked set of possible explanations and next checks.
+RAIMAL analyzes crop condition within center-pivot fields and over time. It identifies persistent, spatially unusual patterns, ranks locations for field inspection, and combines satellite evidence with weather, crop calendar, irrigation events, equipment telemetry (if available), and technician records to produce a ranked set of possible explanations and next checks.
 
 The product should answer two questions:
 
@@ -24,9 +24,9 @@ It must not claim that satellite imagery alone proves a broken sprinkler or othe
 
 ## 2. Problem, objective, and impact
 
-Saudi Arabia has a material agricultural water-efficiency challenge. FAO reports that FAO and the Saudi Irrigation Organization established demonstration farms and training programs for efficient irrigation. By June 2024, 21 farms had been selected from 252 assessed sites, and complete irrigation systems had been installed on 17. GASTAT reported agricultural consumption of non-renewable groundwater of 9,356 million cubic meters in 2023, 7% below 2022. These establish policy and resource relevance; they do not prove a customer will buy PivotWatch or that PivotWatch will save water.
+Saudi Arabia has a material agricultural water-efficiency challenge. FAO reports that FAO and the Saudi Irrigation Organization established demonstration farms and training programs for efficient irrigation. By June 2024, 21 farms had been selected from 252 assessed sites, and complete irrigation systems had been installed on 17. GASTAT reported agricultural consumption of non-renewable groundwater of 9,356 million cubic meters in 2023, 7% below 2022. These establish policy and resource relevance; they do not prove a customer will buy RAIMAL or that RAIMAL will save water.
 
-Large operations have many fields, equipment records and inspection tasks. Field-wide averages can conceal localized spatial patterns. A technician may need to inspect a large area to find a problem. PivotWatch aims to reduce search effort and make the inspection and repair history visible across a portfolio.
+Large operations have many fields, equipment records and inspection tasks. Field-wide averages can conceal localized spatial patterns. A technician may need to inspect a large area to find a problem. RAIMAL aims to reduce search effort and make the inspection and repair history visible across a portfolio.
 
 ### Objectives
 
@@ -75,7 +75,7 @@ The system can present multiple hypotheses and an abstain/insufficient-evidence 
 
 ### 4.1 Saudi need and local context
 
-- FAO/SIO demonstration-farm work is direct evidence of public investment in irrigation efficiency, training and local technology adoption. FAO’s reported program figures include 21 farms selected from 252 assessed and 17 systems installed by June 2024. This does not independently validate PivotWatch demand.
+- FAO/SIO demonstration-farm work is direct evidence of public investment in irrigation efficiency, training and local technology adoption. FAO’s reported program figures include 21 farms selected from 252 assessed and 17 systems installed by June 2024. This does not independently validate RAIMAL demand.
 - GASTAT’s water accounts report 9,356 million m³ of agricultural non-renewable groundwater consumption in 2023, a 7% decrease from 2022. This makes water efficiency a material national concern; it is not an addressable-market estimate.
 - A Saudi national-scale study mapped center-pivot fields from Landsat time series. This is strong local precedent for the geospatial object and potential field inventory.
 - KAUST-supported research studied irrigation events and crop dynamics using Sentinel-1 and Sentinel-2 in center-pivot fields. KSU’s Precision Agriculture Research Chair describes VRI, crop sensing and irrigation performance projects. These demonstrate local scientific activity, not a commercially validated diagnostic model.
@@ -98,7 +98,7 @@ The system can present multiple hypotheses and an abstain/insufficient-evidence 
 
 ### 4.4 Commercial market and competition
 
-Evidence supports a real category, not a proven PivotWatch market:
+Evidence supports a real category, not a proven RAIMAL market:
 
 - CropX markets farm-management, irrigation, sensor, weather and satellite capabilities.
 - OneSoil markets satellite monitoring, anomaly views and scouting workflows.
@@ -207,7 +207,7 @@ Interview 8–12 stakeholders as a starting discovery sprint (not a statisticall
 - Would they share historical imagery boundaries and technician outcomes for a pilot?
 - What subscription unit is natural: pivot, hectare, farm or contractor portfolio?
 
-Run a pilot with pre-agreed outcomes. Compare PivotWatch alerts against technician findings, include unalerted sectors in sampling to estimate missed cases, and report results by crop/season. Avoid selecting only successful cases.
+Run a pilot with pre-agreed outcomes. Compare RAIMAL alerts against technician findings, include unalerted sectors in sampling to estimate missed cases, and report results by crop/season. Avoid selecting only successful cases.
 
 ## 10. Three candidate ideas and desk-based test
 
@@ -215,15 +215,15 @@ The following is a desk-research feasibility comparison, not field testing or cu
 
 | Idea | Impact | Data access | Demo clarity | Saudi evidence | Buyer clarity | Validation burden | Rank |
 |---|---|---|---|---|---|---|---|
-| **PivotWatch: anomaly triage + initial diagnostic support** | High | High | High | High for pivots/irrigation context; direct diagnostic model evidence is non-Saudi | High | Medium-high | **1** |
+| **RAIMAL: anomaly triage + initial diagnostic support** | High | High | High | High for pivots/irrigation context; direct diagnostic model evidence is non-Saudi | High | Medium-high | **1** |
 | **Saudi Pivot Ledger: pivot inventory/change tracking** | Medium | High | High | Very high | Medium | Low-medium | 2 |
 | **Water Productivity Watch: ET/productivity benchmark** | Very high | Medium | Medium | Medium | Medium | High | 3 |
 
-**PivotWatch** has the strongest balance for this hackathon because it focuses on a visible operational action while using accessible imagery and Saudi-specific precedent. Add initial diagnosis as cautious, evidence-linked hypotheses. Its key risk is local diagnostic validity and product overlap with farm platforms.
+**RAIMAL** has the strongest balance for this hackathon because it focuses on a visible operational action while using accessible imagery and Saudi-specific precedent. Add initial diagnosis as cautious, evidence-linked hypotheses. Its key risk is local diagnostic validity and product overlap with farm platforms.
 
 **Saudi Pivot Ledger** maps pivot locations, boundaries, seasonal activity and change for farms or agencies. Saudi national-scale mapping research makes technical feasibility credible. The challenge is recurring willingness to pay: mapping may be an enabling dataset rather than a frequent operational product.
 
-**Water Productivity Watch** benchmarks seasonal crop output and satellite-based water-use indicators across a farm portfolio. It has strong potential impact but needs careful ET validation, ground water data and crop/management context. It is better positioned as a later PivotWatch module than the first build.
+**Water Productivity Watch** benchmarks seasonal crop output and satellite-based water-use indicators across a farm portfolio. It has strong potential impact but needs careful ET validation, ground water data and crop/management context. It is better positioned as a later RAIMAL module than the first build.
 
 ## Source directory
 
@@ -279,6 +279,6 @@ For a categorized, annotated, quick-reference catalog of source links, see [pivo
 
 ## 12. Final recommendation
 
-Build PivotWatch as an **inspection and diagnosis-support workflow**, not a fault oracle. Use satellite data to find persistent patterns, weather and farm records to contextualize them, optional equipment data to strengthen them, and technicians to confirm them. The clearest path to a sellable product is proving that the ranked, evidence-linked work queue improves inspection decisions for one real operator or contractor, then expanding the diagnosis model as verified local cases accumulate.
+Build RAIMAL as an **inspection and diagnosis-support workflow**, not a fault oracle. Use satellite data to find persistent patterns, weather and farm records to contextualize them, optional equipment data to strengthen them, and technicians to confirm them. The clearest path to a sellable product is proving that the ranked, evidence-linked work queue improves inspection decisions for one real operator or contractor, then expanding the diagnosis model as verified local cases accumulate.
 
 

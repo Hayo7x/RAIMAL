@@ -1,4 +1,4 @@
-# PivotWatch MVP
+# RAIMAL MVP
 
 **Status:** runnable local demonstration  
 **Purpose:** make the planned satellite-to-inspection workflow tangible  
@@ -100,7 +100,7 @@ Each generated row represents one illustrative sector/ring on one synthetic date
 
 ## 6. Exports and provenance
 
-CSV filename: `pivotwatch-<run_id>.csv`. JSON filename: `pivotwatch-<run_id>.json`. Both downloads come directly from the selected replay currently in memory. The JSON includes `synthetic_demo: true` and a limitations list. Inspection records remain local in SQLite and are displayed in the app; this version does not include them in the evidence JSON export. There is no background download, scheduler, external service, or telemetry integration.
+CSV filename: `raimal-<run_id>.csv`. JSON filename: `raimal-<run_id>.json`. Both downloads come directly from the selected replay currently in memory. The JSON includes `synthetic_demo: true` and a limitations list. Inspection records remain local in SQLite and are displayed in the app; this version does not include them in the evidence JSON export. There is no background download, scheduler, external service, or telemetry integration.
 
 ## 7. Known limitations and excluded claims
 

@@ -1,4 +1,4 @@
-"""Presentation layer for the local PivotWatch experience."""
+"""Presentation layer for the local RAIMAL experience."""
 from __future__ import annotations
 
 import streamlit as st
@@ -36,7 +36,7 @@ def apply_style() -> None:
 
 
 def brand() -> None:
-    st.markdown('<div class="brand"><span class="brand-icon">◎</span><span>PivotWatch <small>BY RAIMAL</small></span></div>', unsafe_allow_html=True)
+    st.markdown('<div class="brand"><span class="brand-icon">◎</span><span>RAIMAL</span></div>', unsafe_allow_html=True)
 
 
 def landing() -> None:
@@ -69,10 +69,10 @@ def landing() -> None:
     for col, number, title, description in zip(st.columns(3, gap="large"), ["01", "02", "03"], ["See the pattern", "Review the evidence", "Close the loop"], ["Explore the field by sector and distance from its center. Find where the vegetation pattern differs from its peers.", "Check coverage, history, and persistence before opening an inspection task. Insufficient evidence stays visible.", "Take a specific question to the field. Record a finding, a measurement, and the next action alongside the replay date."]):
         with col:
             st.markdown(f'<div class="step"><span class="step-number">{number}</span><h3>{title}</h3><p>{description}</p></div>', unsafe_allow_html=True)
-    st.markdown('''<div class="closing"><h2>Built to support human judgment.</h2><p>An unusual crop pattern can have several explanations: soil, crop variation, management, or water delivery. PivotWatch helps frame the inspection question; a person verifies the cause.</p></div>''', unsafe_allow_html=True)
+    st.markdown('''<div class="closing"><h2>Built to support human judgment.</h2><p>An unusual crop pattern can have several explanations: soil, crop variation, management, or water delivery. RAIMAL helps frame the inspection question; a person verifies the cause.</p></div>''', unsafe_allow_html=True)
     with st.expander("What can I try in this prototype?"):
         st.write("Replay 10 synthetic dates, adjust the coverage gate, review ranked zones, record a demo inspection, and export evidence. The current prototype does not process real satellite imagery and has no validated field performance or water-saving results.")
-    st.markdown('<div class="footer"><span>RAIMAL / PivotWatch</span><span>From observation to a better question.</span></div>', unsafe_allow_html=True)
+    st.markdown('<div class="footer"><span>RAIMAL</span><span>From observation to a better question.</span></div>', unsafe_allow_html=True)
 
 
 def go_to_desk() -> None:

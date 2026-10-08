@@ -1,6 +1,6 @@
-﻿# PivotWatch Source Directory
+﻿# RAIMAL Source Directory
 
-A quick-reference catalog for the RAIMAL PivotWatch research. Links are grouped by evidence type and intended use. A source being listed does not mean it independently proves PivotWatch’s performance or market demand. Check repository licenses and data terms before reuse.
+A quick-reference catalog for the RAIMAL research. Links are grouped by evidence type and intended use. A source being listed does not mean it independently proves RAIMAL’s performance or market demand. Check repository licenses and data terms before reuse.
 
 ## Saudi water need, policy, and local agriculture
 
@@ -96,4 +96,4 @@ These can generate customer-interview questions but should not be cited as proof
 - Commercial websites establish marketed capabilities, not independently measured performance.
 - GitHub presence does not guarantee maintained code, a suitable license, representative training data or validated accuracy.
 - Reddit is anecdotal. Use it to inform discovery questions, not headline proof claims.
-- For a PivotWatch claim, retain a source note describing exactly what the source does and does not demonstrate.
+- For a RAIMAL claim, retain a source note describing exactly what the source does and does not demonstrate.

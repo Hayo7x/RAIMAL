@@ -1,4 +1,4 @@
-# RAIMAL PivotWatch: Solution Statement
+# RAIMAL: Solution Statement
 
 **Domain:** Earth Observation and AI  
 **Prepared:** 7 October 2026  
@@ -7,7 +7,7 @@
 
 ## Submission-ready statement
 
-PivotWatch is a proposed satellite-assisted inspection tool for Saudi center-pivot maintenance teams. Starting with potato farms in Wadi Al-Dawasir, it converts repeated crop observations into a short queue of locations worth inspecting. Each task includes a map, distance from the pivot center and compass sector, observation dates, alternative explanations, and the next measurement needed to distinguish them. Technicians record what they find, and later imagery supports follow-up.
+RAIMAL is a proposed satellite-assisted inspection tool for Saudi center-pivot maintenance teams. Starting with potato farms in Wadi Al-Dawasir, it converts repeated crop observations into a short queue of locations worth inspecting. Each task includes a map, distance from the pivot center and compass sector, observation dates, alternative explanations, and the next measurement needed to distinguish them. Technicians record what they find, and later imagery supports follow-up.
 
 The system uses Sentinel-2 optical imagery and an Isolation Forest machine-learning model to identify unusual combinations of spatial contrast and change over time. Crop-stage records, image-quality checks, and persistence rules control which anomalies become inspection recommendations. The model detects unusual crop behavior; a technician or agronomist confirms its cause.
 
@@ -41,7 +41,7 @@ Use a minimum of eight historical usable dates across selected comparable pivots
 
 **Geometry matters.** A persistent radial location can correspond to an equipment position along a rotating pivot; an angular pattern may be associated with operating or management differences. These associations suggest checks, not unique causes. Ring patterns must be compared across radii: comparing only neighbors on the same ring could miss an entire affected ring. Report a ground zone and distance range, not a nozzle number without equipment configuration and field confirmation.
 
-**Scientific basis.** Saudi research has used Sentinel-1 and Sentinel-2 to study irrigation and crop dynamics at an Al Kharj farm with 47 center-pivot fields. This supports the use of satellite time series in the local setting, but does not validate PivotWatch’s fault identification. [S2]
+**Scientific basis.** Saudi research has used Sentinel-1 and Sentinel-2 to study irrigation and crop dynamics at an Al Kharj farm with 47 center-pivot fields. This supports the use of satellite time series in the local setting, but does not validate RAIMAL’s fault identification. [S2]
 
 **Resolution check.** A hypothetical 400 m radius pivot covers π × 400² ≈ 502,655 m², or 50.3 ha. It contains approximately 5,027 nominal 10 m pixel areas before masking. A 30° wedge contains about 419 such pixel areas before further subdivision. This supports sector summaries at an appropriate scale. Pixels are spatially correlated; these counts do not represent independent samples or guarantee detection of a narrow sprinkler fault. Sentinel-2 provides 10 m red and near-infrared bands and a nominal five-day equatorial revisit design; usable observations can be less frequent. [S3]
 

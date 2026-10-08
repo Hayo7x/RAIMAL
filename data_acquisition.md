@@ -1,4 +1,4 @@
-# PivotWatch data acquisition guide
+# RAIMAL data acquisition guide
 
 Sources checked 7 October 2026. [Architecture](architecture.md) · [Model decision](model_selection.md).
 

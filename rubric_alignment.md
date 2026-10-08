@@ -1,4 +1,4 @@
-# PivotWatch: Rubric Alignment and Pitch Guide
+# RAIMAL: Rubric Alignment and Pitch Guide
 
 **Team:** RAIMAL · **Domain:** Earth Observation and AI · **Prepared:** 7 October 2026
 
@@ -63,7 +63,7 @@ The statements already include a worked calculation. Building a complete softwar
 
 If only three minutes are allowed, allocate 30 seconds to the problem/local evidence, 60 to the workflow, 30 to comparison, 35 to evidence and limits, and 25 to the pilot. Confirm the real time limit with the organizers rather than assuming five minutes.
 
-Suggested opening: “A farm manager has several pivots to inspect and limited technician time. PivotWatch turns persistent satellite crop patterns into a specific field check, then records what the technician found. Our first test is whether that saves at least 25% of decision and search time on Saudi potato pivots.”
+Suggested opening: “A farm manager has several pivots to inspect and limited technician time. RAIMAL turns persistent satellite crop patterns into a specific field check, then records what the technician found. Our first test is whether that saves at least 25% of decision and search time on Saudi potato pivots.”
 
 ## Questions judges are likely to ask
 

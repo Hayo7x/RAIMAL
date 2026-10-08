@@ -1,1 +1,1 @@
-"""PivotWatch local MVP."""
+"""RAIMAL local MVP."""

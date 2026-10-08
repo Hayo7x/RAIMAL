@@ -1,4 +1,4 @@
-# PivotWatch model selection for the presentation
+# RAIMAL model selection for the presentation
 
 Decision prepared 7 October 2026. [Architecture](architecture.md) · [Data acquisition](data_acquisition.md).
 
@@ -8,11 +8,11 @@ This model decision was first prepared for a presentation-only deliverable. A lo
 
 ## Candidate comparison
 
-| Model | Training status and task | Decision for PivotWatch |
+| Model | Training status and task | Decision for RAIMAL |
 |---|---|---|
 | scikit-learn `IsolationForest` | Unsupervised estimator fitted on our feature table; no external pretrained weights | **Core model.** Low operational complexity, suitable for ranking unusual feature combinations when physical-fault labels are scarce. Must demonstrate a real fit and unseen-date score. [Official API](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html). |
 | `ibm-nasa-geospatial/Prithvi-EO-1.0-100M-multi-temporal-crop-classification` | Existing fine-tuned 100M crop/land-cover segmentation checkpoint, Apache-2.0 | **Optional existing fine-tuned demonstration.** Its 13-class label set has no potato class or irrigation-fault classes. Show crop-context output with explicit domain-transfer limits, preferably first on its supplied example. [Model card](https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-1.0-100M-multi-temporal-crop-classification). |
-| `ibm-nasa-geospatial/Prithvi-EO-2.0-tiny-TL` | Pretrained 5M EO backbone with temporal/location inputs; Apache-2.0 | **First custom-adaptation candidate.** A manageable starting point for feature extraction or a new reviewed-label task. It is not already fine-tuned for PivotWatch. [Model card](https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-tiny-TL). |
+| `ibm-nasa-geospatial/Prithvi-EO-2.0-tiny-TL` | Pretrained 5M EO backbone with temporal/location inputs; Apache-2.0 | **First custom-adaptation candidate.** A manageable starting point for feature extraction or a new reviewed-label task. It is not already fine-tuned for RAIMAL. [Model card](https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-tiny-TL). |
 | `ibm-nasa-geospatial/Prithvi-EO-2.0-300M` | Larger pretrained EO backbone | Defer until a smaller-model experiment shows a useful signal and GPU time is available. Size alone does not establish local utility. [Model card](https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M). |
 | `crop-classification/messis` | Prithvi adaptation for Swiss crop classification using ZueriCrop 2.0 | Research comparison only; its training geography and crop task differ from Saudi fault inspection. [Author model card](https://huggingface.co/crop-classification/messis). |
 | IrrMap benchmark models | Irrigation-method classification on the authors' dataset | Relevant to mapping irrigation methods, not prioritizing physical faults. Repository provides training code; a ready Saudi fault checkpoint was not established. [Author repository](https://github.com/Nibir088/IrrMap). |
