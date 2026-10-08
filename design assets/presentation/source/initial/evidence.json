@@ -1,0 +1,52 @@
+{
+  "rows": 480,
+  "dates": 10,
+  "zones": 48,
+  "latest_date": "2025-04-23",
+  "early_date": "2025-01-05",
+  "latest_tasks": 1,
+  "early_tasks": 0,
+  "gates": {
+    "minimum_coverage": 0.8,
+    "minimum_history_dates": 8,
+    "persistence_dates": 2,
+    "persistence_window_days": 20,
+    "history_dates_available": 10,
+    "synthetic": true
+  },
+  "tasks": [
+    {
+      "sector": 1,
+      "zone_id": "S02-R3",
+      "sector_name": "30\u201360\u00b0 clockwise from north",
+      "ring_label": "mid-outer",
+      "ring_mid_m": 250.0,
+      "radius_start_m": 200,
+      "radius_end_m": 300,
+      "anomaly_score": 0.6558273121615749,
+      "peer_deficit": 0.16716175115654952,
+      "valid_coverage": 0.8670523621890384,
+      "observation_count": 10,
+      "question": "Check water delivery and sprinkler condition in this radial segment; if normal, refer for crop/soil review.",
+      "status_label": "Persistent spatial anomaly \u00b7 review required"
+    }
+  ],
+  "saved_record": {
+    "id": 1,
+    "task_id": "demo-20250423-v1",
+    "zone_id": "S02-R3",
+    "replay_date": "2025-04-23",
+    "finding": "Simulated check completed",
+    "measurement": "180 kPa (synthetic)",
+    "action": "Recheck the selected zone",
+    "is_synthetic": 1,
+    "recorded_at": "2026-10-08T13:45:39.317825+00:00"
+  },
+  "checks": "Direct engine and storage checks passed. UI suite fails at unsupported info icon.",
+  "hashes": {
+    "src\\pivotwatch\\engine.py": "8f51049e09d12f63a5b6996fbb9abeb1192d0f75cac818e8313156575dc1433f",
+    "src\\pivotwatch\\demo.py": "152be244ba6582e990dbfba597e38fcc30bc0c5e3213ba01dc895faaf2c441f5",
+    "src\\pivotwatch\\storage.py": "e75ed651a497ab1e3d9d637a513f0a4126a60fd52b51766f20e9f40f3544ee19",
+    "app.py": "2808c79478c266047bc36b20094e849617e885c9dcf7c88a4dc6db47686211e3"
+  }
+}

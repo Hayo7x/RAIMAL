@@ -1,0 +1,6 @@
+*.pdf binary
+*.pptx binary
+*.xlsx binary
+*.png binary
+*.jpg binary
+"design assets/presentation/**" -text whitespace=cr-at-eol

@@ -1,0 +1,2 @@
+sector,zone_id,sector_name,ring_label,ring_mid_m,radius_start_m,radius_end_m,anomaly_score,peer_deficit,valid_coverage,observation_count,question,status_label
+1,S02-R3,30–60° clockwise from north,mid-outer,250.0,200,300,0.6558273121615749,0.16716175115654952,0.8670523621890384,10,"Check water delivery and sprinkler condition in this radial segment; if normal, refer for crop/soil review.",Persistent spatial anomaly · review required

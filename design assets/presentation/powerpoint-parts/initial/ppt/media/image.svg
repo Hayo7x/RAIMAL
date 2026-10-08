@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 470" role="img" aria-label="Illustrative circular irrigation field with a highlighted inspection sector. This is a schematic, not satellite imagery.">
+        <defs><pattern id="rows" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><rect width="8" height="8" fill="#718353"/><path d="M0 0V8" stroke="#9aa46c" stroke-width="3"/></pattern></defs>
+        <path d="M10 95H490M10 375H490M90 25V445M410 25V445" stroke="#3a5943" fill="none"/>
+        <circle cx="250" cy="235" r="190" fill="url(#rows)"/>
+        <circle cx="250" cy="235" r="201" fill="none" stroke="#9aa977" stroke-dasharray="3 7"/>
+        <path d="M250 235L414.5 140A190 190 0 0 1 440 235Z" fill="#d4b66c" opacity=".85"/>
+        <g fill="none" stroke="#d6dfac" opacity=".4"><circle cx="250" cy="235" r="95"/><circle cx="250" cy="235" r="134"/><circle cx="250" cy="235" r="165"/><path d="M250 45V425M60 235H440M85 140L415 330M155 70L345 400M85 330L415 140M155 400L345 70"/></g>
+        <path d="M250 235L375 95" stroke="#eef0cc" stroke-width="3"/><circle cx="250" cy="235" r="7" fill="#f5f4d4"/>
+        <circle cx="389" cy="199" r="8" fill="#203f32" stroke="#f7da87" stroke-width="3"/>
+        <path d="M389 199L412 285H478" stroke="#f6dc95" fill="none"/>
+        <rect x="315" y="288" width="170" height="55" rx="8" fill="#f2edd8"/>
+        <text x="329" y="311" fill="#294533" font-size="12" font-family="sans-serif">A question, not a diagnosis.</text><text x="329" y="329" fill="#687355" font-size="10" font-family="sans-serif">Inspect the pattern. Verify the cause.</text>
+        <text x="246" y="22" fill="#d9e5bf" font-size="12" font-family="sans-serif">N</text>
+        </svg>

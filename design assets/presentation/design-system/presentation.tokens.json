@@ -1,0 +1,35 @@
+{
+  "canvas": {
+    "width": 1280,
+    "height": 720,
+    "aspectRatio": "16:9"
+  },
+  "font": "Segoe UI",
+  "colors": {
+    "background": "#F6F7F2",
+    "ink": "#263329",
+    "earth": "#3F4B3B",
+    "grove": "#44633F",
+    "field": "#5A9367",
+    "mist": "#E7EDE2",
+    "grid": "#CBD5C5",
+    "muted": "#596653",
+    "water": "#245C73",
+    "highlight": "#E8BB68",
+    "caution": "#805411",
+    "white": "#FFFFFF"
+  },
+  "typeSizesInAuthoringCanvas": {
+    "slideTitle": 48,
+    "kicker": 16,
+    "bodyDefault": 26,
+    "footer": 16,
+    "chartAxis": 19
+  },
+  "layout": {
+    "leftMargin": 56,
+    "titleTop": 87,
+    "footerTop": 671
+  },
+  "status": "Snapshot of visual draft; pending final visual QA"
+}

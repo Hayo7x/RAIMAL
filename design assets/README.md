@@ -13,3 +13,7 @@ Open [RAIMAL-brand-identity.html](RAIMAL-brand-identity.html) for the visual gui
 Reusable tokens: [CSS](raimal.tokens.css) · [JSON](raimal.tokens.json). Color checks: [contrast report](contrast-report.json). Visual overview: [PNG](RAIMAL-brand-preview.png).
 
 The identity extension is a proposed v1.0 system; the approved logo remains unchanged. No existing application styling has been modified.
+
+## Presentation assets
+
+[Presentation design library](presentation/README.md): original images and logos, editable decks, slide previews, chart data, source scripts, design tokens and source credits. The visual revision is labeled as a draft.
