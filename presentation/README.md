@@ -1,12 +1,16 @@
-# RAIMAL presentation
+# RAIMAL submission presentation
 
-- **RAIMAL-pitch.pptx**: editable PowerPoint, eight main slides and five Q&A backups. Full source URLs and talk track are in speaker notes.
-- **RAIMAL-pitch.pdf**: the same 13 slides, rendered from the finalized PPTX at 2560 × 1440 pixels per slide. PDF text is part of the rendered images; use PPTX for editing.
-- **presentation-plan.md**: strengthened plan and production evidence boundaries.
-- **speaker-notes.md**: standalone presenter notes and sources.
+Updated 8 October 2026. Use these files:
 
-The pitch uses a five-minute rehearsal assumption. The organizer's individual presentation limit remains unconfirmed. Stop at slide 8 for the main pitch; slides 9–13 are backups.
+- [PowerPoint](RAIMAL-pitch.pptx)
+- [PDF preview](RAIMAL-pitch.pdf)
+- [Speaker notes and citations](speaker-notes-final.md)
+- [Current presentation plan](presentation-plan-final.md)
 
-Slide 5 uses a captured synthetic backend replay. The existing Streamlit UI test failed during preparation, so this deck does not depend on a live app demonstration. Real satellite ingestion and field performance remain proposed.
+12 slides, both RAIMAL and KFUPM logos on every slide, short copy, real Sentinel-2 imagery and an actual exploratory anomaly-model run. The final team slide includes smaller framed portraits and event credentials.
 
-The deck uses the approved RAIMAL logo and Segoe UI with the supplied Chalk, Grove and Earth palette. Keep Segoe UI available when editing the PowerPoint. The PDF preserves the reviewed appearance.
+The PDF is a high-resolution rendering of the finalized PPTX. Editable text, diagrams, maps and three charts remain in the PowerPoint. Prior drafts are in archive/; their plans/notes are historical.
+
+Real satellite inputs, masks, model output and provenance are in assets/real-sentinel/. The assessment describes measured vegetation variation, not a confirmed fault. Only three dates are available, so operational dispatch is withheld. Prithvi is a published future-context reference, not our inference. Team credentials are user-supplied, with Muaath's bronze additionally checked against official results.
+
+Reusable elements, previews, source scripts and all imagery/logos are saved in ../design assets/presentation/current/ and ../design assets/presentation/original-assets/.

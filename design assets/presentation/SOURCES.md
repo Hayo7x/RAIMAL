@@ -25,3 +25,7 @@ Original files are preserved unchanged in `original-assets/`. Slide cropping and
 - kfupm: https://mediacenter.kfupm.edu.sa/brand-guidelines/
 
 Native chart data and zone polygons come from the captured prototype fixtures or explicitly labeled planning assumptions. Full slide-specific attribution and evidence limitations are in `reference/speaker-notes-visual.md`. Third-party assets retain their original ownership and terms.
+
+## Current revision additions
+
+See original-assets/real-sentinel/README.md for genuine satellite data, calculations and model provenance; original-assets/events/SOURCES.md for Olympiad marks; original-assets/team/README.md for portrait crops. Current slide-specific citations are in current/speaker-notes.md.

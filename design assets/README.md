@@ -16,4 +16,4 @@ The identity extension is a proposed v1.0 system; the approved logo remains unch
 
 ## Presentation assets
 
-[Presentation design library](presentation/README.md): original images and logos, editable decks, slide previews, chart data, source scripts, design tokens and source credits. The visual revision is labeled as a draft.
+[Presentation design library](presentation/README.md): original images and logos, editable decks, slide previews, chart data, source scripts, design tokens and source credits. The completed revision is in presentation/current; earlier drafts are retained separately.
